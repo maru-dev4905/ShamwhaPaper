@@ -1,0 +1,22 @@
+// setting
+@import "common/reset";
+@import "common/variable";
+@import "common/font";
+@import "common/mixin";
+@import "common/animation";
+
+/*! 메인페이지 */
+
+@import "import/side";
+@import "import/bag";
+@import "tablet/bag-m";
+@import "import/makeup";
+@import "import/box";
+@import "tablet/box-m";
+@import "import/embossing";
+@import "import/rendezvous";
+@import "tablet/rendezvous-m";
+@import "import/ending";
+@import "tablet/ending-m";
+
+/*! 메인페이지 END */

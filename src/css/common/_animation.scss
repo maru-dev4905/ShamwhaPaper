@@ -1,0 +1,251 @@
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeOut-down{
+    0%{
+        opacity: 1;
+        margin-top: 0;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+}
+@keyframes fadeIn-up{
+    0%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes fadeIn-up-s{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut-up-s{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+@keyframes fadeOut-down-s{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(50px);
+    } 
+}
+@keyframes slideUp{
+    0%{
+        bottom: -100vh;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes slideDown{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        display: none;
+    }
+}
+
+@keyframes hambugerClose1{
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 45%;
+        transform: translateY(-15%);
+    }
+    100%{
+        top: 45%;
+        transform: translateY(-15%) rotate(45deg);
+        width: 100%;
+    }
+}
+@keyframes hambugerClose2{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes hambugerClose3{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 45%;
+        transform: translateY(-0%);
+    }
+    100%{
+        bottom: 45%;
+        transform: translateY(-0%) rotate(-45deg);
+        width: 100%;
+    }
+}
+
+@keyframes hambugerOpen1{
+    0%{
+        top: 45%;
+        transform: translateY(-15%) rotate(45deg);
+        width: 100%;
+    }
+    50%{
+        top: 45%;
+        transform: translateY(-15%);
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes hambugerOpen2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        // transform: translateY(-50%);
+    }
+}
+@keyframes hambugerOpen3{
+    0%{
+        bottom: 45%;
+        transform: translateY(-0%) rotate(-45deg);
+        width: 100%;
+    }
+    50%{
+        bottom: 45%;
+        transform: translateY(-0%);
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@media all and (max-width:2560px){
+    @keyframes productMain1{
+        0%{
+            height: 710px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+    @-webkit-keyframes productMain1{
+        0%{
+            height: 710px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+}
+@media all and (max-width:1920px){
+    @keyframes productMain1{
+        0%{
+            height: 600px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+    @-webkit-keyframes productMain1{
+        0%{
+            height: 600px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+}
+@media all and (max-width:1440px){
+    @keyframes productMain1{
+        0%{
+            height: 410px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+    @-webkit-keyframes productMain1{
+        0%{
+            height: 410px;
+        }
+        100%{
+            height: 0;
+        }
+    }
+}
+@keyframes productMain1{
+    0%{
+        height: 650px;
+    }
+    100%{
+        height: 0;
+    }
+}
+@keyframes productMain2{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+@keyframes aboutTitle{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes bgScale{
+    0%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

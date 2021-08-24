@@ -1,0 +1,150 @@
+@media all and (max-width:1920px){
+    .bag{
+        img{
+            height: 470px;
+            top: 56%;
+        }
+        .red-bag{
+            top: 78%;
+        }
+        .bag_white .bag_text .text{
+            &:nth-child(odd){
+                top: 15%;
+            }
+            &:nth-child(even){
+                bottom: 25%;
+                letter-spacing: 4.5vw;
+            }
+            &#pin1{
+                top: 15%;
+            }
+            &#pin2{
+                bottom: 25%;
+                left: 52%;
+            }
+        }
+        .bag_red .bag_text .text{
+            &#pin3{
+                top: 57.5%;
+            }
+            &#pin4{
+                top: 76.7%;
+                bottom: auto;
+                left: 52%;
+            }
+        }
+    }
+}
+@media all and (max-width:1600px){
+    .bag{
+        img{
+        }
+    }
+    .bag .bag_white .bag_text .text{
+        font-size: 230px;
+    }
+    .bag .bag_red .bag_text .text{
+        font-size: 230px;
+    }
+}
+@media all and (max-width:1440px){
+    .bag{
+        img{
+        }
+    }
+}
+@media all and (max-width:1366px){
+    .bag .bag_white .bag_text .text{
+        font-size: 192px;
+    }
+    .bag .bag_red .bag_text .text{
+        font-size: 192px;
+    }
+}
+@media all and (max-width:1280px){
+    .bag{
+        img{
+            height: 360px;
+        }
+        .bag_white .bag_text .text{
+            font-size: 15.6250vw;
+
+            &:nth-child(even){
+                top: 55%;
+                letter-spacing: 5vw;
+                margin-left: 5px;
+            }
+        }
+        .bag_red .bag_text .text{
+            font-size: 15.6250vw;
+            letter-spacing: 5vw;
+            margin-left: 5px;
+        }
+    }
+    .bag .bag_white .bag_text .text#pin1{
+        letter-spacing: 5vw;
+    }
+    .bag .bag_white .bag_text .text#pin2{
+        padding-left: -20px;
+        letter-spacing: 4vw;
+    }
+    .bag .bag_red .bag_text .text#pin3{
+        letter-spacing: 5vw;
+        left: 52% !important;
+    }
+    .bag .bag_red .bag_text .text#pin4{
+        letter-spacing: 4vw;
+        font-size: 15.6250vw;
+    }
+    .bag .bag_fade h3{
+        font-size: 60px;
+        line-height: inherit;
+    }
+}
+@media all and (max-width:1024px){
+    .bag{
+        img{
+            height: 360px;
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @media all and (max-width:1920px){
+        .bag{
+            img{
+                height: 470px;
+                top: 56%;
+            }
+            .red-bag{
+                top: 78%;
+            }
+            .bag_white .bag_text .text{
+                &:nth-child(odd){
+                    top: 15%;
+                }
+                &:nth-child(even){
+                    bottom: 25%;
+                    letter-spacing: 4.5vw;
+                }
+                &#pin1{
+                    top: 15%;
+                }
+                &#pin2{
+                    bottom: 25%;
+                    left: 52%;
+                }
+            }
+            .bag_red .bag_text .text{
+                &#pin3{
+                    top: 57.5%;
+                }
+                &#pin4{
+                    top: 74.5%;
+                    bottom: auto;
+                    left: 52%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@media all and (max-width:1920px){
+    .circlebox{
+        .circlebox-slideUp{
+            .circlebox-text h2{
+                font-size: 14.5833vw;
+            }
+            .circlebox-img{
+                img{
+                    &:nth-child(2){
+                        left: 47.5%;
+                    }
+                }
+            } 
+        }
+    }
+    .rectbox{
+        .rectbox-bg-choco{
+            .rectbox-img{
+                .chocobox{
+                    img{
+                        &:first-child{
+                            left: 19vw;
+                            top: 8vw;
+                        }
+                        &:last-child{
+                            left: 11.5vw;
+                            top: 13.3vw;
+                        }
+                    }
+                }
+                .greenbox{
+                    img{
+                        &:first-child{
+                            left: 0.3vw;
+                            top: 15.3vw;
+                        }
+                        &:last-child{
+                            top: 15.3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1280px){
+    .rectbox .rectbox-bg-green .rectbox-text1 h3{
+        font-size: 60px;
+    }
+}
+@media all and (max-width:1240px){
+    .rectbox{
+        .rectbox-bg-choco{
+            .rectbox-img{
+                .chocobox{
+                    img{
+                        
+                        &:first-child{
+                            left: 18.5vw;
+                            top: 17vw;
+                        }
+                        &:last-child{
+                            left: 11.9vw;
+                            top: 21.7vw;
+                        }
+                    }
+                }
+                .greenbox{
+                    img{
+                        &:first-child{
+                            top: 23.5vw;
+                        }
+                        &:last-child{
+                            top: 23.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:1024px){
+    .rectbox{
+        .rectbox-bg-choco{
+            .rectbox-img{
+                .chocobox{
+                    img{
+                        
+                        &:first-child{
+                            left: 18.5vw;
+                            top: 12.5vw;
+                        }
+                        &:last-child{
+                            left: 11.5vw;
+                            top: 17.6vw;
+                        }
+                    }
+                }
+                .greenbox{
+                    img{
+                        &:first-child{
+                            top: 19.5vw;
+                        }
+                        &:last-child{
+                            top: 19.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

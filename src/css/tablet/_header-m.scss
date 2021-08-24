@@ -1,0 +1,26 @@
+@media all and (max-width:1280px){
+    header{
+        .gnb{
+            display: none;
+        }
+        .logo{
+            width: 245.7px;
+            height: 18px;
+
+            a img{
+                width: 100%;
+            }
+        }
+    }
+    .header-content{
+        height: 80px;
+        
+        &.scroll{
+            height: 60px;
+
+            &+.dropdown-menu{
+                height: 60px;
+            }
+        }
+    }
+}

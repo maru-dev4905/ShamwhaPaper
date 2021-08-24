@@ -1,0 +1,96 @@
+#trigger26{
+    position: relative;
+    top: 75vh;
+}
+
+.ending{
+    width: 100vw;
+    height: 250vh;
+    left: 0;
+    bottom: calc(-100vh);
+    z-index: 5000;
+    background-color: #F3C758;
+    position: relative;
+
+    .ending-content{
+        position: relative;
+        top: 25vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .ending-title{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3{
+            font-size: 10.9375vw;
+            font-family: "Roboto",sans-serif;
+            font-weight: 600;
+            color: $white-100;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:last-child{
+                letter-spacing: -0.65vw;
+            }
+        }
+    }
+    
+    .ending-text{
+        position: absolute;
+        bottom: 28%;
+        left: 60%;
+        
+        h4{
+            font-size: 30px;
+            font-family: "Roboto",sans-serif;
+            font-weight: 600;
+            text-align: right;
+            text-transform: uppercase;
+            color: $black-100;
+            line-height: 38px;
+            margin-bottom: 20px;
+        }
+
+        a{
+            font-size: 14px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            color: $black-100;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            &::after{
+                margin-left: 10px;
+                content: "";
+                display: inline-block;
+                width: 38px;
+                height: 11.5px;
+                background: url("../images/icon/icon_arrow.png") no-repeat center / contain;
+                transition: 0.5s ease;
+            }
+
+            &:hover{
+                &::after{
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+    
+    img{
+        position: absolute;
+        z-index: 5500;
+        top: 50%;
+        left: 38.6%;
+        transform: translate(-50%,-50%);
+    }
+}

@@ -1,0 +1,103 @@
+footer{
+    background-color: $black-100;
+    width: 100vw;
+    height: 230px;
+    position: relative;
+    bottom: 0;
+    z-index: 99999;
+
+    .footer-inner{
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .fnb{
+            ul{
+                display: flex;
+                align-items: center;
+                margin-top: 65px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid #4D4D4D;
+            }
+            li,button{
+                font-size: 14px;
+                font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+                font-weight: 400;
+                color: $gray-300;
+                transition: 0.5s ease;
+                position: relative;
+                margin: 0 15px;
+
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    width: 1px;
+                    height: 13px;
+                    background-color: $gray-300;
+                    position: absolute;
+                    top: 50%;
+                    right: -13px;
+                    transform: translateY(-50%);
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child::after{
+                    display: none;
+                }
+                &:hover{
+                    color: $gray-100;
+                }
+                &.emailPopup{
+                    margin-right: 0;
+                }
+            }
+            
+            li:nth-child(2){
+                color: $white-100 !important;
+            }
+        }
+        .footer-content{
+            padding-top: 25px;
+            padding-bottom: 20px;
+            display: flex;
+            
+            li{
+                font-size: 14px;
+                font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+                font-weight: 400;
+                color: $gray-300;
+                margin: 0 15px;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    right: -15px;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 13px;
+                    background-color: $gray-300;
+                }
+
+                &:first-child{
+                    margin-left: 0;
+                }
+
+                &:last-child::after{
+                    display: none;
+                }
+            }
+        }
+        .footer-copy{
+            font-size: 12px;
+            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+            font-weight: 400;
+            color: $gray-300;
+        }
+    }
+}

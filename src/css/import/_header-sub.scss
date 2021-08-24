@@ -1,0 +1,628 @@
+body.white header{
+    .logo a img{
+        opacity: 0;
+
+        &+img{
+            opacity: 1;
+        }
+    }
+    .gnb ul li{
+        color: $white-100;
+    }
+    
+    .gnb_sub{
+        .hambuger-btn span{
+            background-color: $white-100;
+        }
+        .search{
+            i{
+                opacity: 0;
+                &+i{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+body.menu-white header{
+    &.white{
+        background-color: transparent;
+    }
+    .logo a img{
+        opacity: 0 !important;
+
+        &+img{
+            opacity: 1 !important;
+        }
+    }
+    .gnb ul li{
+        color: $black-100;
+    }
+    .gnb_sub .search{
+        opacity: 0;
+        visibility: hidden;
+        z-index: -10;
+
+        i{
+            opacity: 1;
+
+            &+i{
+                opacity: 0;
+            }
+        }
+    }
+    .gnb_sub .global{
+        opacity: 0;
+        visibility: hidden;
+        z-index: -10;
+    }
+    .gnb_sub{
+        .hambuger-btn span{
+            background-color: $white-100;
+        }
+    }
+}
+
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 900000;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+
+    .logo{
+        width: 275px;
+        height: 21px;
+        position: relative;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 1;
+                z-index: 5;
+                transition: 0.5s ease;
+
+                &+img{
+                    opacity: 0;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    .gnb{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s ease;
+        width: 511px;
+        height: 100%;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            li{
+                text-transform: uppercase;
+                margin-right: 40px;
+                font-size: 16px;
+                font-family: "Roboto",sans-serif;
+                font-weight: 600;
+                color: $black-100;
+                transition: 0.5s ease;
+                position: relative;
+                vertical-align: middle;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &::after{
+                    position: absolute;
+                    left: 0;
+                    bottom: -8px;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: #000;
+                    display: block;
+                    transition: 0.3s ease;
+                    opacity: 0;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:hover::after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .gnb_sub{
+        display: flex;
+
+        li{
+            margin-left: 30px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+
+        .global{
+            position: relative;
+            width: 30px;
+            height: 24px;
+            transition: 0.5s ease;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $black-100;
+                transition: 0.5s ease;
+            }
+            span{
+                position: absolute;
+                font-size: 14px;
+                font-family: "Roboto",sanvvs-serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition: 0.5s ease;
+
+                &.active{
+                    opacity: 1;
+                    z-index: 1;
+                }
+                &:not(.active){
+                    opacity: 0;
+                    z-index: -1;
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.5s ease;
+                }
+            }
+            &:hover{
+                span{
+                    &.active{
+                        opacity: 0;
+                        z-index: -1;
+                    }
+                    &:not(.active){
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+        .search{
+            position: relative;
+            width: 24px;
+            height: 24px;
+            transition: 0.5s ease;
+            opacity: 1;
+            visibility: visible;
+
+            i{
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: url("../images/icon/search.svg") center no-repeat;
+                background-size: contain;
+                transition: 0.5s ease;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 1;
+                
+                &+i{
+                    background: url("../images/icon/search-w.svg") no-repeat center / contain;
+                    opacity: 0;
+                }
+            }
+        }
+        .hambuger-btn{
+            width: 30px;
+            height: 23px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+            span{
+                position: absolute;
+                display: block;
+                height: 3px;
+                background-color: $black-100;
+                transition: 0.5s ease;
+
+                &:nth-child(1){
+                    top: 0;
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    width: 21px;
+                    position: static;
+                }
+                &:nth-child(3){
+                    bottom: 0;
+                    width: 26px;
+                }
+            }
+            &.open{
+                span{
+                    &:nth-child(1){
+                        animation: hambugerOpen1 0.5s ease forwards;
+                    }
+                    &:nth-child(2){
+                        animation: hambugerOpen2 0.5s ease forwards;
+                    }
+                    &:nth-child(3){
+                        animation: hambugerOpen3 0.5s ease forwards;
+                    }
+                }
+            }
+            &.close{
+                span{
+                    &:nth-child(1){
+                        animation: hambugerClose1 0.5s ease forwards;
+                    }
+                    &:nth-child(2){
+                        animation: hambugerClose2 0.5s ease forwards;
+                    }
+                    &:nth-child(3){
+                        animation: hambugerClose3 0.5s ease forwards;
+                    }
+                }
+            }
+        }
+    }
+}
+.header-content.header-white{
+    .gnb ul li{
+        color: $white-100;
+    } 
+    .gnb_sub .search i{
+        opacity: 0;
+        &+i{
+            opacity: 1;
+        }
+        transition: 0.5s ease;
+    }
+    .gnb_sub .global::after{
+        background-color: $white-100;
+    }
+    .gnb_sub .global span a{
+        color: $white-100;
+    }
+    .gnb_sub .hambuger-btn span{
+        background-color: $white-100;
+    }
+
+    .gnb.drop{
+        .logo a img{
+            opacity: 1;
+
+            &+img{
+                opacity: 0;
+            }
+
+        }
+        .gnb ul li{
+            color: $black-100;
+        }
+        .gnb_sub .search i{
+            opacity: 1;
+            &+i{
+                opacity: 0;
+            }
+            transition: 0.5s ease;
+        }
+        .gnb_sub .global::after{
+            background-color: $black-100;
+        }
+        .gnb_sub .global span a{
+            color: $black-100;
+        }
+        .gnb_sub .hambuger-btn span{
+            background-color: $black-100;
+        }
+    }
+}
+
+.header-content{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    transition: 0.5s;
+    padding: 0 40px;
+    position: relative;
+    z-index: 9999;
+    
+    &.drop{
+        background-color: #fff;
+    }
+
+    &.scroll{
+        height: 80px;
+        background-color: $white-100;
+        box-shadow: 0px 3px 80px 15px rgba($color: #000000, $alpha: 0.1);
+        
+        &+.dropdown-menu{
+            top: 80px;
+        }
+    }
+    &.black{
+        .logo a img{
+            opacity: 1;
+
+            &+img{
+                opacity: 0;
+            }
+        }
+        &.drop{
+            &.scroll{
+                box-shadow: none;
+            }
+        }
+    }
+    &.white{
+        .logo a img{
+            opacity: 0;
+
+            &+img{
+                opacity: 1;
+            }
+        }
+        .gnb ul li{
+            color: $white-100;
+
+            &::after{
+                background-color: $white-100;
+            }
+        } 
+        .gnb_sub .search i{
+            opacity: 0;
+            &+i{
+                opacity: 1;
+            }
+            transition: 0.5s ease;
+        }
+        .gnb_sub .global::after{
+            background-color: $white-100;
+        }
+        .gnb_sub .global span a{
+            color: $white-100;
+        }
+        .gnb_sub .hambuger-btn span{
+            background-color: $white-100;
+        }
+
+        &.scroll{
+            .logo a img{
+                opacity: 1;
+                &+img{
+                    opacity: 0;
+                }
+            }
+            .gnb ul li{
+                color: $black-100;
+
+                &::after{
+                    background-color: $black-100;
+                }
+            } 
+            .gnb_sub .search i{
+                opacity: 1;
+                &+i{
+                    opacity: 0;
+                }
+                transition: 0.5s ease;
+            }
+            .gnb_sub .global::after{
+                background-color: $black-100;
+            }
+            .gnb_sub .global span a{
+                color: $black-100;
+            }
+            .gnb_sub .hambuger-btn span{
+                background-color: $black-100;
+            }
+        }
+        &.drop{
+            &.scroll{
+                box-shadow: none;
+            }
+            .logo a img{
+                opacity: 1;
+                &+img{
+                    opacity: 0;
+                }
+            }
+            .gnb ul li{
+                color: $black-100;
+
+                &::after{
+                    background-color: $black-100;
+                }
+            } 
+            .gnb_sub .search i{
+                opacity: 1;
+                &+i{
+                    opacity: 0;
+                }
+                transition: 0.5s ease;
+            }
+            .gnb_sub .global::after{
+                background-color: $black-100;
+            }
+            .gnb_sub .global span a{
+                color: $black-100;
+            }
+            .gnb_sub .hambuger-btn span{
+                background-color: $black-100;
+            }
+        }
+    }
+
+}
+.dropdown-menu{
+    position: absolute;
+    width: 100vw;
+    height: 0px;
+    background-color: $white-100;
+    box-shadow: 0 30px 20px 0px rgba(0,0,0,0.03);
+    opacity: 0;
+    transition: 0.5s ease;
+    top: 100px;
+    visibility: hidden;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+
+    &.show{
+        opacity: 1;
+        visibility: visible;
+        height: 142px;
+    }
+
+    .dropdown-menu-wrapper{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 511px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+
+            &:nth-child(1) > ul{
+                transform: translateX(-1px);
+            }
+            &:nth-child(2) > ul{
+                transform: translateX(-24px);
+            }
+            &:nth-child(3) > ul{
+                transform: translateX(-28px);
+            }
+            &:nth-child(4) > ul{
+                transform: translateX(-11px);
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+
+
+                li{
+                    font-size: 14px;
+                    font-family: "Spoqa Han Sans",sans-serif;
+                    color: #777777;
+                    transition: 0.1s ease;
+                    margin-bottom: 26px;  
+                    text-align: center;       
+                    font-weight: 400;
+
+                    
+                    &:hover{
+                        color: #000000;
+                    }
+                }
+            }
+
+        }
+    }
+}
+body.menu-white{
+
+    .header-content{
+        .gnb ul li{
+            color: $black-100;
+        }
+        .gnb_sub .hambuger-btn span{
+            background-color: $white-100;
+        }
+        .gnb_sub .global span a{
+            color: $black-100;
+        }
+        .gnb_sub .global::after{
+            background-color: $black-100;
+        }
+        .gnb_sub .search i{
+            opacity: 1;
+
+            &+i{
+                opacity: 0;
+            }
+        }
+        &.scroll{
+            &.white{
+                .logo a img{
+                    opacity: 0;
+                    &+img{
+                        opacity: 1;
+                    }
+                }
+                .gnb_sub .hambuger-btn span{
+                    background-color: $white-100;
+                }
+                .gnb_sub .global span a{
+                    color: $black-100;
+                }
+                .gnb_sub .global span::after{
+                    background-color: $black-100;
+                }
+                .gnb_sub .search i{
+                    opacity: 1;
+                    &+i{
+                        opacity: 0;
+                    }
+                }
+            }
+            background-color: transparent;
+        }
+        &.drop{
+            background-color: transparent;
+        }
+        &:hover{
+            background-color: transparent;
+            &+.dropdown-menu{
+                height: 0;
+                opacity: 0;
+                bottom: 142px;
+                visibility: hidden;
+            }
+        }
+    }
+    .dropdown-menu{
+        height: 0;
+        opacity: 0;
+        bottom: 142px;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,57 @@
+.error{
+    width: 100vw;
+    height: calc(100vh - 230px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #wrap{
+        width: max-content;
+        height: 403px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            margin-bottom: 42px;
+        }
+        h2{
+            font-size: 30px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            color: $black-100;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
+            margin-bottom: 10px;
+
+            &:nth-child(1){
+                font-family: "Spoqa Han Sans",sans-serif;
+                font-weight: 400;
+                color: #777777;
+            }
+            &:nth-child(2){
+                font-family: "Roboto",sans-serif;
+                font-weight: 400;
+                color: #777777;
+            }
+        }
+        a{
+            margin-top: 44px;
+            width: 200px;
+            height: 50px;
+            background: $black-100;
+            color: $white-100;
+            font-size: 14px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

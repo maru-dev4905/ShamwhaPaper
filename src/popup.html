@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style-sub.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <main>
+        <div class="popup-box">
+            <div class="popup-content swiper-container">
+
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="http://placehold.it/496x596" alt="popup-img">
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="http://placehold.it/496x596" alt="popup-img">
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="http://placehold.it/496x596" alt="popup-img">
+                        </a>
+                    </li>
+                </ul>
+                <button class="popup-slide-prev swiper-button-prev">
+                    <i></i>
+                </button>
+                <button class="popup-slide-next swiper-button-next">
+                    <i></i>
+                </button>
+            </div>
+            <div class="popup-bottom">
+                <label class="chk-box">
+                    <input type="checkbox" name="check" class="chk">
+                    <span></span>
+                    오늘 하루 열지 않기
+                </label>
+                <button class="popup-bottom-close">
+                    <i></i>
+                </button>
+            </div>
+        </div>
+        <div class="popup-box ie">
+            <div class="popup-content">
+
+                <div id="ie-wrap">
+                    <img src="./images/icon/ie-icon.svg" alt="ie">
+                    <h2>IE버전 안내</h2>
+                    <P>
+                        삼화제지 기업 홈페이지는 IE11 이상의 브라우저에서 원활하게
+                        <br>
+                        서비스 됩니다. IE11 이하의 브라우저에는 일부 서비스가
+                        <br>
+                        원활하지 않을 수 있는 점 양해 부탁 드립니다.            
+                    </P>
+                </div>
+                
+            </div>
+            <div class="popup-bottom">
+                <label class="chk-box">
+                    <input type="checkbox" name="check" class="chk">
+                    <span></span>
+                    오늘 하루 열지 않기
+                </label>
+                <button class="popup-bottom-close">
+                    <i></i>
+                </button>
+            </div>
+        </div>
+        <div class="cookie-box">
+            <button class="cookie-box-close">
+                <i></i>
+            </button>
+            <h2>이 웹사이트는 쿠키를 사용합니다.</h2>
+            <p>
+                이 웹사이트는 쿠키를 사용합니다. 웹 사이트를 계속 사용함으로써
+                <br>
+                고객은 쿠키의 사용을 동의하게 됩니다. 자세한 내용은 본사의 
+                <br>
+                <a href="./etc-cookie.html">쿠키정책</a>을 참조하시기 바립니다.                
+            </p>
+        </div>
+    </main>
+    <script>
+        var swiper = new Swiper(".swiper-container",{
+            grabCursor: true,
+            slidesPerView: '1',
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        })
+    </script>
+    <script src="./js/common.js"></script>
+    <script src="./js/scrollUp.js"></script>
+    <script src="./js/popup.js"></script>
+</body>
+</html>

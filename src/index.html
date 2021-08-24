@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMHWA PAPER</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style-main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="./css/plugin/swiper.min.css">
+    <script src="./js/plugin/swiper.min.js"></script>
+
+    <style>
+        #wrap{
+            height: 100vh;
+            height: calc(var(--vh,1vh) * 100);
+        }
+    </style>
+</head>
+<body class="index">
+    <div class="bg"></div>
+    <div id="wrap">
+        <div class="wrap-inner">
+            <header class="fix">
+                <div class="header-content black main-header">
+                    <h1 class="logo">
+                        <a href="./index.html">
+                            <img src="./images/main/logo.png" alt="logo">
+                            <img src="./images/main/logo-w.png" alt="logo">
+                        </a>
+                    </h1>
+                    <nav class="gnb">
+                        <ul>
+                            <li>
+                                <a href="./about.html">about</a>
+                            </li>
+                            <li>
+                                <a href="./product.html">products</a>
+                            </li>
+                            <li>
+                                <a href="./sustainability.html">sustainability</a>
+                            </li>
+                            <li>
+                                <a href="./contact-main.html">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="gnb_sub">
+                        <li>
+                            <button class="search">
+                                <i>
+                                </i>
+                                <i>
+                                </i>
+                            </button>
+                        </li>
+                        <li class="global">
+                            <span class="active">
+                                <a href="#">kor</a>
+                            </span>
+                            <span>
+                                <a href="#">eng</a>
+                            </span>
+                        </li>
+                        <li>
+                            <button class="hambuger-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-menu-wrapper">
+                        <li>
+                            <ul>
+                                <li><a href="./about.html">회사소개</a></li>
+                                <li><a href="./certificate.html">인증서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="./product.html">Samwha paper</a></li>
+                                <li><a href="./smart-search.html">Smart Search</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="./sustainability.html">지속가능경영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="./contact-main.html">고객문의</a></li>
+                                <li><a href="./map.html">오시는길</a></li>
+                                <li><a href="./sns.html">SNS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="hambuger-menu fix">
+                <nav class="hambuger-nav">
+                    <ul>
+                        <li>
+                            <a href="./about.html">about</a>
+                            <ul>
+                                <li>
+                                    <a href="./about.html">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="./certificate.html">인증서</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./sustainability.html">sustainability</a>
+                            <ul>
+                                <li>
+                                    <a href="./sustainability.html">지속가능경영</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./product.html">product</a>
+                            <ul>
+                                <li>
+                                    <a href="./product.html">shamwha paper</a>
+                                </li>
+                                <li>
+                                    <a href="./smart-search.html">smart search</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./contact-main.html">contact</a>
+                            <ul>
+                                <li>
+                                    <a href="./inquiry.html">고객문의</a>
+                                </li>
+                                <li>
+                                    <a href="./map.html">오시는 길</a>
+                                </li>
+                                <li>
+                                    <a href="./sns.html">sns</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-box-wrap fix">
+                <h1>
+                    <img src="./images/main/logo-w.svg" alt="logo-w">
+                </h1>
+                <button class="search-box-close">
+                    <i>
+                        <img src="./images/icon/btn_close.svg" alt="close">
+                    </i>
+                </button>
+                <form action="#" method="GET">
+                    <div class="search-input">
+                        <input type="text" placeholder="제품명 또는 검색어를 입력하세요">
+                        <span>
+                            <i>
+                                <img src="./images/icon/search-w.svg" alt="search">
+                            </i>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <aside class="left">
+                <p>BESPOKE PAPER</p>
+            </aside>
+            <aside class="right">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            </aside>
+            <aside class="bottom">
+                <button class="scroll-btn" type="button">
+                    <i></i>
+                </button>
+            </aside>
+            <main>
+                <section class="bag" >
+                    <div class="bag_white">
+                        <div class="bag_text white">
+                            <div class="word">
+                                <h2 class="text">
+                                    bespoke
+                                </h2>
+                                <h2 class="text">
+                                    paper
+                                </h2>
+                            </div>
+                            <div class="word">
+                                <h2 class="text" id="pin1">
+                                    truly
+                                </h2>
+                                <h2 class="text" id="pin2">
+                                    yours
+                                </h2>
+                            </div>
+                            <img class="white-bag fix" src="./images/main/bag_white.png" alt="bag_white" id="pin5">
+                        </div>
+                    </div>
+                    
+                    <span id="trigger1"></span>
+                    <span id="triggerFade"></span>
+
+                    <div class="bag_red" >
+                        <div class="bag_text red">
+                            <h2 class="text" id="pin3">truly</h2>
+                            <h2 class="text" id="pin4">yours</h2>
+                            <img class="red-bag" src="./images/main/bag_red.png" alt="bag_red" id="pin6">
+                        </div>
+                    </div>
+                    
+                    <div class="bag_fade" id="pin7">
+                        <h3>
+                            bespoke paper
+                        </h3>
+                        <h3>
+                            truly yours
+                        </h3>
+                        <p>평범한 일상에 빛을  더하는 삼화제지</p>
+                    </div>
+                </section>
+
+                <section class="makeup" >
+                    <span id="trigger2"></span>
+                    <span id="trigger3"></span>
+                    <span id="trigger4"></span>
+                    <span id="trigger5"></span>
+                    <div id="makeup-pin">
+                        <div class="makeup-intro">
+                            <h2>bespoke solution</h2>
+                            <p>최적의 브랜드 아이덴티티&컬러&패키징 솔루션을 제공하는 국내 최초의 색지 전문 제지사</p>
+                        </div>
+                        <div class="makeup-dim"></div>
+                        <div class="makeup-bg" ></div>
+                    </div>
+                </section>
+
+                <div id="trigger6"></div>
+                <div id="trigger7"></div>
+                <div id="trigger8"></div>
+                <div id="trigger9"></div>
+
+                <section class="box">
+                    <article class="circlebox">
+                        <div class="circlebox-slideUp fix"></div>
+                        <div class="circlebox-slideUp fix"></div>
+                        <div class="circlebox-slideUp fix"></div>
+                        <div class="circlebox-slideUp fix circlebox-wrap">
+                            <div class="circlebox-text">
+                                <h2>color palettes<p>새로운 색상 스팩트럼으로 시장을 주도하는 컬러 기술력</p></h2>
+                            </div>
+                            <div class="circlebox-img">
+                                <img class="circlebox-lid" src="./images/common/toplid.png" alt="circlebox-lid">
+                                <img class="circlebox-paper" src="./images/common/paper.png" alt="circlebox-paper">
+                                <img class="circlebox-blue" src="./images/common/circlebox-blue.png" alt="circlebox-blue">
+                                <img class="circlebox-orange" src="./images/common/circlebox-orange.png" alt="circlebox-orange">
+                                <img class="circlebox-green" src="./images/common/circlebox-green.png" alt="circlebox-green">
+                            </div>
+                            <div class="circlebox-bg">
+                                <div class="circlebox-bg-orange"></div>
+                                <div class="circlebox-bg-green"></div>
+                                <div class="rectbox-bg"></div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <div id="trigger10"></div>
+
+                    <article class="rectbox">
+                        <div id="trigger11"></div>
+                        <div id="trigger12"></div>
+                        <div id="trigger13"></div>
+                        <div id="trigger14"></div>
+
+                        <div class="rectbox-bg-green fix">
+                            <div class="rectbox-text1">
+                                <h3>bespoke color</h3>
+                                <p>기업과 브랜드에 가치를 더하는 컬러</p>
+                            </div>
+                        </div>
+                        <div class="rectbox-bg-choco fix">
+                            <div class="rectbox-img">
+                                <div class="chocobox">
+                                    <img class="chocobox-close-drawer" src="./images/common/rectbox-choco-drawer.png" alt="chocobox-drawer">
+                                    <img src="./images/common/rectbox-choco.png" alt="chocobox">
+                                </div>
+                                <div class="greenbox">
+                                    <img src="./images/common/rectbox-green-drawer.png" alt="greenbox-drawer">
+                                    <img src="./images/common/rectbox-green.png" alt="greenbox">
+                                </div>
+                            </div>
+                            <div class="rectbox-text2">
+                                <h3>
+                                    perfect
+                                    <br>
+                                    embossing
+                                </h3>
+                                <p>절대적인 컬러 표현을 위한 완벽한 엠보싱</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                
+                
+                <section class="embossing">
+                    
+                    <div id="trigger15"></div>
+                    <div id="trigger16"></div>
+                    <div id="trigger17"></div>
+                    <div id="trigger18"></div>
+                    <div id="trigger18"></div>
+                    <div id="trigger19"></div>
+                    <div id="trigger20"></div>
+                    <div id="trigger21"></div>
+
+                    <article class="embossing-box1 fix">
+                        <div class="embossing-img">
+                            <div class="embossing-img-bg">
+                                <img src="./images/common/embossing-text1.svg" alt="">
+                            </div>
+                            <img src="./images/main/embossing_01.png" alt="embossing-bg">
+                            <p>절대적인 컬러 표현을 위한 완벽한 엠보싱</p>
+                        </div>
+                        <div class="embossing-text">
+                            <h3>bespoke embossing</h3>
+                            <p>잠들어 있는 종이의 감각을 깨우는 세상에 하나뿐인 패턴</p>
+                        </div>
+                    </article>
+                    <article class="embossing-box2 fix">
+                        <img src="./images/main/embossing_02.png" alt="embossing-bg">
+                        <div class="embossing-text">
+                            <h3>leathack</h3>
+                            <p>다양한 패턴 시리즈의 레자크</p>
+                        </div>
+                    </article>
+                    <article class="embossing-box3 fix">
+                        <img src="./images/main/embossing_03.png" alt="embossing-bg">
+                        <div class="embossing-text">
+                            <h3>tant</h3>
+                            <p>부드럽고 자연스러운 탄트</p>
+                        </div>
+                    </article>
+                    <article class="embossing-box4 fix">
+                        <img src="./images/main/embossing_04.png" alt="embossing-bg">
+                        <div class="embossing-text">
+                            <h3>dimple</h3>
+                            <p>자연스러운 양면 펠트 딤플</p>
+                        </div>
+                    </article>
+                    <article class="embossing-box5 fix">
+                        <img src="./images/main/embossing_05.png" alt="embossing-bg">
+                        <div class="embossing-text">
+                            <h3>mermaid</h3>
+                            <p>인어 비늘 무늬를 닮은 마매이드</p>
+                        </div>
+                    </article>
+                </section>
+
+                <div id="trigger22"></div>
+                <div id="trigger23"></div>
+                <div id="trigger24"></div>
+                <div id="trigger25"></div>
+
+                <section class="rendezvous">
+                    <div class="rendezvous-img fix">
+                        <img src="./images/common/embossing-text5.svg" alt="embossing-text2">
+                    </div>
+                    <div class="rendezvous-text">
+                        <h3>rendezvous</h3>
+                        <p>이미지 재현성이 우수한 랑데뷰 국내 러프그로스지 시장 점유율 1위</p>
+                        <div class="rendezvous-bg">
+                            <img src="./images/main/rendezvous-bg.png" alt="rendezvous">
+                        </div>
+                    </div>
+                    <div class="rendezvous-cover fix">
+                        <div class="rendezvous-cover-box">
+                            <img src="./images/common/rendezvous-cover.png" alt="rendezvous-cover">
+                            <button class="rendezvous-btn">
+                                <i></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="trigger26"></div>
+
+                <section class="ending fix" id="ending">
+                    <div class="ending-content">
+                        <div class="ending-title">
+                            <h3>bespoke</h3>
+                            <h3>solution</h3>
+                        </div>
+                        <div class="ending-text">
+                            <h4>
+                                samwha bespoke
+                                <br>
+                                solution
+                            </h4>
+                            <a href="./contact-main.html">상담신청</a>
+                        </div>
+                        <img src="./images/common/bag_orange.png" alt="bag_orange">
+                    </div>
+                    <footer class="main">
+                        <div class="footer-inner">
+                            <nav class="fnb">
+                                <ul>
+                                    <li>
+                                        <a href="./etc-terms.html">이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href="./etc-privacy.html">개인정보취급방침</a>
+                                    </li>
+                                    <li>
+                                        <button class="emailPopup">이메일무단수집거부</button>
+                                    </li>
+                                    <li>
+                                        <a href="./etc-cookie.html">쿠키정책</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul class="footer-content">
+                                <li>
+                                    <p>서울 중구 을지로 170 을지로트윈타워 동관 7동</p>
+                                </li>
+                                <li>
+                                    <p>사업자등록번호 317-81-26964</p>
+                                </li>
+                                <li>
+                                    <p>TEL 02) 753-1136~9</p>
+                                </li>
+                                <li>
+                                    <p>FAX 02) 773-7484</p>
+                                </li>
+                            </ul>
+                            <p class="footer-copy">
+                                Copyright &copy; samwha Co.Ltd.All Rights Reserved.
+                            </p> 
+                        </div>
+                    </footer>
+                    <button class="scroll-up-btn">
+                        <i></i>
+                    </button>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <div class="rendezvous-content swiper-container">
+        <button class="rendezvous-close-btn">
+            <i></i>
+        </button>
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <article>
+                    <img src="./images/common/rendezvous-big-cover.png" alt="rendezvous-big-cover">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+                    <div class="rendezvous-slide-title">
+                        <h3>
+                            vintage
+                            <br>
+                            motorcycle
+                            <br>
+                            club
+                        </h3>
+                        <p>
+                            Samwha Paper Sample Book
+                        </p>
+                    </div>
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT
+                            </p>
+                            <p>
+                                LAMINATED PAPER
+                            </p>
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous01.png" alt="rendezvous-01">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+                    
+                    <div class="rendezvous-slide-content">
+                        <h4>
+                            Designers'
+                            <br>
+                            Choice
+                        </h4>
+                        <strong>RendezVous</strong>
+                        <p>
+                            랑데뷰는 이미지 재현성이 우수한 최고급 인쇄 용지입니다.57년 전통 순수 우리 기술로 종이를생산해 온 삼화제지의 노하우와 기술력을 바탕으로 타사의 경쟁 제품들과 비교할 수 없는 품질을 구현하였고, 그에 대한 관심과 사랑으로 랑데뷰는 국내 러프그로스지 시장 점유율 부동의 1위를 계속 지켜가고 있습니다. 앞으로도 최고의 제품을 만들어내기 위한 끊임없는 연구와 노력을 다하겠습니다.                            
+                        </p>
+                    </div>
+                    
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                            <p>
+                                LAMINATED PAPER
+                            </p>
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous02.png" alt="rendezvous-02">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+                    <div class="rendezvous-slide-content">
+                        <h3>01</h3>
+                        <h4>
+                            SUPERB
+                            <br>
+                            COLOR
+                            <br>
+                            VISIBILITY
+                        </h4>
+                        <strong>
+                            색 발현성이 우수합니다
+                        </strong>
+                        <p>
+                            종이의 색상은 인쇄 시 표현되는 색에 영향을 주며, 랑데뷰의 알맞은 바탕색은 선명하고, 자연에 가까운 색상 발현을 가능하게 합니다. 랑데뷰 내츄럴은 자연적인 백색 톤으로 자연스러운 색상과 이미지의 편안함을 효과적으로 보여주고, 랑데뷰 울트라 화이트는 백색도(Whiteness)를 극대화함으로써 인쇄 후 선명성이 유사 타제품을 능가하며, 인쇄물을 더욱 돋보이게 하고 고급스러움을 강조합니다.                            
+                        </p>
+                    </div>
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT
+                            </p>            
+                            <p>
+                                LAMINATED PAPER
+                            </p>                   
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 190g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous03.png" alt="rendezvous-03">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                NATURAL 210g/m²                                
+                            </p>
+                            <p>
+                                4 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                            <p>
+                                UV VARNISH
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous04.png" alt="rendezvous-04">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+                    <div class="rendezvous-slide-content">
+                        <h3>02</h3>
+                        <h4>
+                            NATURAL
+                            <br>
+                            SURFACE
+                            <br>
+                            TOUCH
+                        </h4>
+                        <strong>
+                            자연스러운 표면감이 살아있습니다
+                        </strong>
+                        <p>
+                            차별화된 코팅 방식에서 얻은 러프한 면감특성은 종이 
+                            특유의 자연스러움을 살려 인쇄물에 고급감을 
+                            부여합니다.                                
+                        </p>
+                    </div>
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 210g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 210g/m²                                
+                            </p>
+                            <p>
+                                4 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous05.png" alt="rendezvous-05">
+                </article>
+            </li>
+            <li class="swiper-slide">
+                <article>
+                    <div class="rendezvous-slide-content">
+                        <h3>03</h3>
+                        <h4>BULKINESS</h4>
+                        <strong>벌키한 느낌의 종이입니다</strong>
+                        <p>
+                            뛰어난 Bulkiness는 동일 평량 대비 따뜻한 느낌을 부여하여 인쇄물을 더욱 돋보이게 합니다.
+                        </p>
+                    </div>
+                    <div class="rendezvous-slide-bottom">
+                        <div class="rendezvous-bottom-left">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                ULTRA WHITE 210g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                <br>
+                                OFFSET PRINT                                
+                            </p>
+                        </div>
+                        <div class="rendezvous-bottom-right">
+                            <p>
+                                RENDEZVOUS
+                                <br>
+                                NATURAL 210g/m²                                
+                            </p>
+                            <p>
+                                5 COLORS
+                                OFFSET PRINT                                
+                            </p>
+                            <p>
+                                SPOT FOIL                                
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./images/common/rendezvous06.png" alt="rendezvous-06">
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <div class="popup-box">
+        <div class="popup-content swiper-container">
+
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="http://placehold.it/500x596" alt="popup-img">
+                </li>
+                <li class="swiper-slide">
+                    <img src="http://placehold.it/500x596" alt="popup-img">
+                </li>
+                <li class="swiper-slide">
+                    <img src="http://placehold.it/500x596" alt="popup-img">
+                </li>
+            </ul>
+            <button class="popup-slide-prev swiper-button-prev">
+                <i></i>
+            </button>
+            <button class="popup-slide-next swiper-button-next">
+                <i></i>
+            </button>
+        </div>
+        <div class="popup-bottom">
+            <label class="chk-box">
+                <input type="checkbox" name="check" class="chk">
+                <span></span>
+                오늘 하루 열지 않기
+            </label>
+            <button class="popup-bottom-close">
+                <i></i>
+            </button>
+        </div>
+    </div>
+    <div class="ie">
+        <button class="ie-box-close">
+            <i></i>
+        </button>
+        <h2>IE버전 안내</h2>
+        <P>
+            삼화제지 기업 홈페이진는 IE11 이상의 브라우저에서
+            원활하게 서비스 됩니다. IE11 이하의 브라우저에는 일부 서비스가
+            원활하지 않을 수 있는 점 양해 부탁드립니다. 
+        </P>
+    </div>
+    <div class="cookie-box">
+        <button class="cookie-box-close">
+            <i></i>
+        </button>
+        <h2>이 웹사이트는 쿠키를 사용합니다.</h2>
+        <p>
+            이 웹사이트는 쿠키를 사용합니다. 웹 사이트를 계속 사용함으로써
+            <br>
+            고객은 쿠키의 사용을 동의하게 됩니다. 자세한 내용은 본사의 
+            <br>
+            <a href="./etc-cookie.html">쿠키정책</a>을 참조하시기 바립니다.                
+        </p>
+    </div>
+    <div class="email-dim">
+        <div class="email-popup">
+            <button>
+                <i></i>
+            </button>
+            <h3>이메일 무단수집거부</h3>
+            <p>
+                삼화제지 기업 사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나
+                <br>
+                그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                <br>
+                이를 위반시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.                    
+            </p>
+        </div>
+    </div> 
+    <div class="ie-popup popup-box">
+        <div class="ie-popup-content">
+            <h1>
+                <img src="./images/main/logo.png" alt="logo">
+            </h1>
+            <p class="ie-popup-text">
+                인터넷익스플로어(IE) 브라우저의 웹 호환성 문제로 
+                <br>
+                삼화제지 사이트 이용이 불안정합니다. 
+                <br>
+                원활한 사용을 위해 다른 브라우저 사용을 권장 드립니다.
+                <br>
+                (Google Chrome, NAVER Whale, Microsoft Edge 등) 
+                <br>
+                이용에 불편을 드려 죄송합니다.
+                <br>
+                감사합니다.            
+            </p>
+            <div class="ie-popup-inquiry">
+                <strong>고객문의</strong>
+                <p>카카오톡 samwhapaper</p>
+                <p>고객센터 02-6395-6224</p>
+            </div>
+        </div>
+        <div class="popup-bottom">
+            <label class="chk-box">
+                <input type="checkbox" name="check" class="chk">
+            </label>
+            <button class="popup-bottom-close">
+                <i></i>
+            </button>
+        </div>
+    </div>
+    <script src="./js/plugin/lucid.js"></script>
+    <script>
+        let range = 150;
+        
+        if($(window).width() <= 1280){
+            range = 80;
+        }
+        
+        $(this).impulse({
+            effect : "easeOutCubic",
+            range : range,
+            tempo : 500
+        });
+
+        var swiper = new Swiper(".rendezvous-content",{
+            grabCursor: true,
+            slidesPerView: 'auto',
+            freeMode: true,
+            mousewheel: true
+        }) 
+
+        var swiper2 = new Swiper('.popup-content',{
+            grabCursor: true,
+            slidesPerView: '1',
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        })
+    </script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>

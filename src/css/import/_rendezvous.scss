@@ -1,0 +1,429 @@
+#trigger22{
+    position: relative;
+    top: -100vh;
+}
+#trigger23{
+    position: relative;
+    top: 150vh;
+}
+#trigger24{
+    position: relative;
+    top: 200vh;
+}
+#trigger25{
+    position: relative;
+    top: 250vh;
+}
+
+@media all and(max-width:1280px){
+    .rendezvous{
+        .rendezvous-img{
+            img{
+                transform: scale(300);
+            }
+        }
+    }
+}
+.rendezvous{
+    position: relative;
+    width: 100vw;
+    height: 600vh;
+    z-index: 1000;
+    
+    .rendezvous-img{
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1100;
+        transition: 1.5s;
+        transition-timing-function: cubic-bezier(.76,0,.42,1);
+
+        img{
+            width: 100.5vw;
+            height: 110vh;
+            position: absolute;
+            top: 50%;
+            left: -250%;
+            transform: scale(340);
+            object-fit: cover;
+
+            &.show{
+                opacity: 1;
+            }
+            &.hide{
+                opacity: 0;
+            }
+        }
+    }
+    .rendezvous-text{
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1.5s ease;
+        opacity: 0;
+        position: fixed;
+        
+        h3{
+            font-size: 126px;
+            font-family: "Roboto",sans-serif;
+            font-family: Roboto-bold;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white-100;
+            margin-bottom: 30px;
+            transition: 0.5s ease;
+            opacity: 0;
+        }
+        p{
+            font-size: 16px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 300;
+            color: $white-100;
+            text-align: center;
+            transition: 0.5s ease;
+            opacity: 0;
+            margin-bottom: 50px;
+        }
+        .rendezvous-bg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            height: 101vh;
+            opacity: 0;
+            transition: 1.5s;
+            z-index: -100;
+            object-fit: cover;
+            overflow: hidden;
+            
+            img{
+                position: absolute;
+                top: -0.5%;
+                left: 0;
+                width: 100%;
+                height: 108%;
+                left: 0;
+                transition: 1.5s ease;
+                
+                &.hide{
+                    left: -100vw;
+                }
+            }
+        }
+
+        &.show{
+            background-color: #000;
+            z-index: 3000;
+            opacity: 1;
+
+            h3{
+                opacity: 1;
+            }
+            p{
+                opacity: 0;
+                animation: fadeIn-up-s 0.5s 0.25s ease forwards;
+            }
+            .rendezvous-bg{
+                opacity: 1;
+            }
+        }
+        &.hide{
+            h3{
+                opacity: 1;
+            }
+            p{
+                opacity: 1;
+                animation: fadeOut-up-s 0.5s ease forwards;
+            }
+            .rendezvous-bg{
+                opacity: 0;
+            }
+        }
+    }
+    .rendezvous-cover{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        z-index: 4000;
+        transition: 1.5s ease;
+        display: -ms-grid;
+        -ms-grid-columns: min-content;
+
+        .rendezvous-cover-box{
+            position: relative;
+            top: 150vh;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 539px;
+
+            &.hide{
+                transform: translate(-750%, -50%);
+                transition: 1.5s;
+            }
+            &.show{
+                transform: translate(-50%, -50%);
+                transition: 1.5s;
+            }
+            img{
+                position: relative;
+                left: 0;
+                transform: translateX(0);
+                transition: 1.5s;
+            }
+
+            button{
+                width: 70px;
+                height: 70px;
+                background-color: $white-100;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0,-50%);
+                transition: 1.5s;
+
+                i{
+                    width: 21px;
+                    height: 21px;
+                    background: url("../images/icon/plus.png") no-repeat center / cover;
+                }
+            }
+        }
+    }
+}
+
+.swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.rendezvous-content{
+    height: 100vh;
+    position: fixed !important;
+    z-index: 999999 !important;
+    right: 0;
+    top: 0;
+    transform: translateX(100vw);
+    background-color: $black-100;
+    transition: 1.5s;
+    
+    &.show{
+        right: 0;
+        transform: translateX(0);
+    }
+    &.hide{
+        transform: translateX(100vw);
+    }
+    .rendezvous-close-btn{
+        width: 24px;
+        height: 24px;
+        position: fixed;
+        right: -40%;
+        top: 40px;
+        z-index: 999999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1.5s ease;
+        
+        
+        i{
+            width: 24px;
+            height: 24px;
+            background: url("../images/icon/close-w.png") no-repeat center / contain;
+        }
+    }
+    
+    li{
+
+        &:nth-child(1){
+            width: auto !important;
+            height: 100%;
+            position: relative;
+
+            img{
+                width: auto !important;
+                height: 100vh;
+            }
+
+            span{
+                position: absolute;
+                right: -65px;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 70px;
+                height: 70px;
+                background-color: $white-100;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999999;
+
+                i{
+                    width: 14px;
+                    height: 22px;
+                    background: url("../images/icon/left-arrow.png") no-repeat center / contain;
+                }
+            }
+        }
+        
+        &:nth-child(2){
+            .rendezvous-slide-title{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 260px;
+                padding: 40px;
+                background: url("../images/common/box_bg.png") no-repeat center / cover;
+                
+                h3{
+                    font-size: 40px;
+                    font-family: "Roboto",sans-serif;
+                    font-weight: 600;
+                    color: $white-100;
+                    text-transform: uppercase;
+                    text-align: left;
+                    line-height: 44px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 16px;
+                    font-family: "Roboto",sans-serif;
+                    font-weight: 400;
+                    color: $white-100;
+                }
+            }
+        }
+        
+        &:nth-child(6){
+            .rendezvous-slide-bottom{
+                color: $black-100;
+            }
+        } 
+        
+        article{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            bottom: 0;
+            width: 100%;
+        }
+        .rendezvous-slide-bottom{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 0 40px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            color: $white-100;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            line-height: 14px;
+
+            p{
+                margin-top: 8px;
+            }
+
+            .rendezvous-bottom-left{
+                text-align: left;
+            }
+            .rendezvous-bottom-right{
+                text-align: right;
+            }
+        }
+        .rendezvous-slide-content{
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            padding: 40px;
+            width: 472px;
+            background: url("../images/common/box_bg.png") no-repeat center / cover;
+        
+            h3{
+                font-size: 45px;
+                font-family: 'Roboto';
+                font-weight: 400;
+                color: $white-100;
+                margin-bottom: 15px;
+            }
+            h4{
+                font-size: 40px;
+                font-family: "Roboto",sans-serif;
+                font-weight: 600;
+                color: $white-100;
+                margin-bottom: 97px;
+            }
+            strong{
+                font-size: 20px;
+                font-family: "Roboto",sans-serif;
+                font-weight: 600;
+                color: $white-100;
+                margin-bottom: 10px;
+                display: block;
+            }
+            p{
+                font-size: 14px;
+                font-family: "Spoqa Han Sans",sans-serif;
+                font-weight: 400;
+                color: $white-100;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .rendezvous .rendezvous-img img{
+        height: auto;
+        object-fit: none;
+        width: 100%;
+    }
+    .rendezvous-content{
+        transform: translateX(200%);
+
+        &.show{
+            transform: translateX(0);
+        }
+        &.hide{
+            transform: translateX(200%);
+        }
+    }
+    .rendezvous-cover{
+        .rendezvous-cover-box{
+            img{
+                transform: translateX(0);
+            }
+            button{
+                transform: translateX(0);
+            }
+        }
+    }
+    .rendezvous-cover.hide{
+        .rendezvous-cover-box{
+            img{
+                transform: translateX(-400%);
+            }
+            button{
+                transform: translateX(-4000%);
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.scroll-up-btn {
+    position: absolute;
+    z-index: 99999;
+    right: 40px;
+    bottom: 270px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,.7);
+}
+.scroll-up-btn i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/icon/btn_top.svg) center no-repeat;/*0114 수정*/
+    background-size: 12px
+}
+
+.etcTerms{
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 181px;
+    margin-bottom: 110px;
+    
+    .etcTerms-title{
+        margin-bottom: 45px;
+
+        h2{
+            font-size: 30px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            color: $black-100;
+            padding-bottom: 23px;
+            border-bottom: 2px solid $black-100;
+        }
+    }
+
+    h3{
+        font-size: 19px;
+        font-family: "Spoqa Han Sans",sans-serif;
+        font-weight: 600;
+        color: $black-100;
+        margin-bottom: 26px;
+    }
+    h4{
+        font-size: 15px;
+        font-family: "Spoqa Han Sans",sans-serif;
+        font-weight: 600;
+        color: $black-100;
+        margin-bottom: 7px;
+    }
+    p{
+        font-size: 14px;
+        font-family: "Spoqa Han Sans",sans-serif;
+        font-weight: 300;
+        color: #777777;
+        line-height: 20px;
+        word-break: keep-all;
+    }
+    [class*="etcTerms-article"]:not(.etcTerms-article-group){
+        margin-bottom: 26px;
+    }
+    .indent{
+        text-indent: -2em;
+        margin-left: 2em;
+    }
+}
+.etcTerms-article-group{
+    padding-bottom: 46px;
+
+    [class*="etcTerms-article"]:last-child{
+        margin-bottom: 0;
+    }
+}

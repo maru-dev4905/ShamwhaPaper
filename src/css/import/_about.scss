@@ -1,0 +1,363 @@
+// 회사소개 페이지 
+body.fp-viewing-0{
+    .intro{
+        .intro-bg{
+            transform: scale(1);
+        }
+        h1{
+            opacity: 0;
+            animation: fadeIn-up 0.75s ease forwards;
+        }
+    }
+}
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .intro-bg{
+        background: url("../images/bg/about_kv01-2.png") no-repeat center / cover;
+        transition: 2s ease;
+        transform: scale(1.1);
+        height: 100%;
+    }
+    h1{
+        font-size: 90px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 600;
+        color: #8B2611;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%,-50%);
+        animation: fadeOut-down 0.75s ease forwards;
+    }
+}
+
+.pagenavigation1{
+    position: fixed;
+    left: 40px;
+    top: 58%;
+    transform: translateY(-50%) rotate(-90deg);
+    z-index: 9999;
+    transition: 0.5s ease;
+    color: $black-100;
+    text-transform: uppercase;
+    transform-origin: left top;
+    font-size: 13px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
+
+    span:not(:last-child){
+        &::after{
+            content: "/";
+            color: #000;
+            margin: 0 10px;
+        }
+    }
+}
+
+.pagenavigation2{
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+
+        li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid rgba($color: #000000, $alpha: 0.5);
+            margin-bottom: 10px;
+            background-color: transparent;
+            transition: 0.5s ease;
+            
+            &.active{
+                background-color: $black-100;
+            }
+        }
+    }
+}
+body.fp-viewing-3{
+    .scrollarrow{
+        opacity: 0;
+    }
+}
+.scrollarrow{
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: 0.5s ease;
+    
+    button{
+        width: 26px;
+        height: 38px;
+
+        i{
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url("../images/icon/btn_arrow.svg") no-repeat center / contain;
+        }
+    }
+}
+
+.about-sec1{
+    overflow: hidden;
+
+    strong, h2{
+        color: #503500;
+    }
+    
+    .about-sec1-bg{
+        background: url("../images/bg/about_kv_02.png") no-repeat center / cover;
+        transform: scale(1.1);
+        transition: 2s ease;
+    }
+    &.fp-completely{
+        .about-sec1-bg{
+            transform: scale(1);
+        }
+        .about-text i{
+            animation: aboutTitle 0.5s 0.5s ease forwards;
+        }
+        h2 span > span{
+            transition: 0.5s 1s ease;
+            transform: translateX(-35px);
+            display: inline-block;
+        }
+    }
+}
+.about-sec2{
+    overflow: hidden;    
+
+    strong, h2{
+        color: #2B413C;
+    }
+
+    .about-sec2-bg{
+        background: url("../images/bg/about_kv_03.png") no-repeat center / cover;
+        transform: scale(1.1);
+        transition: 2s ease;
+    }
+    &.fp-completely{
+        .about-sec2-bg{
+            transform: scale(1);
+        }
+        .about-text i{
+            animation: aboutTitle 0.5s 0.5s ease forwards;
+        }
+        h2 span > span{
+            transition: 0.5s 1s ease;
+            transform: translateX(-1px);
+            display: inline-block;
+        }
+    }
+}
+.about-sec3{
+    overflow: hidden;
+
+    strong, h2{
+        color:#093C60;
+    }
+
+    .about-sec3-bg{
+        background: url("../images/bg/about_kv_04.png") no-repeat center / cover;
+        transform: scale(1.1);
+        transition: 2s ease;
+        
+        h2 span > span{
+            transform: translateX(-20px);
+        }
+    }
+
+    &.fp-completely{
+        .about-sec3-bg{
+            transform: scale(1);
+        }
+        .about-text i{
+            animation: aboutTitle 0.5s 0.5s ease forwards;
+        }
+        h2 span > span{
+            transform: translateX(-60px);
+            transition: 0.5s 1s ease;
+            display: inline-block;
+        }
+    }
+}
+[class*="about-sec"]{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+    &:last-child .about-text h2 i{
+        margin-right: 0;
+    }
+    
+    .about-text{
+        position: absolute;
+        top: 20%;
+        left: 13.6%;
+        overflow: hidden;
+    
+        strong{
+            font-size: 20px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            margin-bottom: 60px;
+            display: block;
+        }
+        h2{
+            width: 100%;
+            height: 90px;
+            vertical-align: middle;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            
+            span{
+                font-size: 90px;
+                font-family: "Roboto",sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: 0.5s ease;
+            }
+            i{
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+        p{
+            font-size: 16px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 400;
+            color: $gray-300;
+            line-height: 22px;
+        }
+    }
+
+
+
+    .about-icon{
+        position: absolute;
+        left: 13.6%;
+        bottom: 20%;
+
+        ul{
+            display: flex;
+            
+            li{
+                width: 210px;
+                height:  35px;
+                border-top: 2px solid $black-100;
+                margin-right: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 0 10px;
+            }
+
+            img{
+                width: 24px;
+                height: 24px;
+                margin-top: 10px;
+            }
+            span{
+                font-size:  16px;
+                font-family: "Roboto",sans-serif;
+                font-weight: 600;
+                color: $black-100;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+body{
+    &.fp-viewing-0{
+        .pagenavigation2 li:nth-child(1){
+            background-color: $black-100;
+        }
+    }
+    &.fp-viewing-1{
+        .pagenavigation2 li:nth-child(2){
+            background-color: $black-100;
+        }
+    }
+    &.fp-viewing-2{
+        .pagenavigation2 li:nth-child(3){
+            background-color: $black-100;
+        }
+    }
+    &.fp-viewing-3{
+        .pagenavigation2 li:nth-child(4){
+            background-color: $black-100;
+        }
+    }
+}
+.fullpage-wrapper{
+    transition-duration: 1000ms !important;
+}
+
+@media all and (max-width:1280px){
+    .pagenavigation1{
+        top: 65%;
+    }
+    .intro h1{
+        font-size: 60px;
+    }
+    [class*=about-sec] .about-text{
+        top: 163px;
+        left: 175px;
+    }
+    [class*=about-sec] .about-text strong{
+        font-size: 16px;
+        margin-bottom: 27px;
+        letter-spacing: 1.2px;
+    }
+    [class*=about-sec] .about-text h2{
+        height: 60px;
+        margin-bottom: 6px;
+    }
+    [class*=about-sec] .about-text h2 span{
+        font-size: 60px;
+    }
+    [class*=about-sec] .about-text p{
+        font-size: 12px;
+        letter-spacing: 0.9px;
+        line-height: 18px;
+    }
+    [class*=about-sec] .about-icon {
+        bottom: 157px;
+    }
+    [class*=about-sec] .about-icon ul li{
+        width: 185px;
+        margin-right: 15px;
+    }
+    [class*=about-sec] .about-icon ul span{
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+    .about-sec1.fp-completely h2 span>span{
+        transform: translateX(-30px);
+    }
+    .about-sec3.fp-completely h2 span>span{
+        transform: translateX(-43px);
+    }
+    [class*=about-sec] .about-text h2 i{
+        margin-right: 16px;
+    }
+}
+
+// 회사소개 페이지 END

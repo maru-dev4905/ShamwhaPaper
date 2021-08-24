@@ -1,0 +1,17 @@
+@media all and (max-width:1280px){
+    .hambuger-menu{
+        .hambuger-nav{
+            left: 178px;
+
+            > ul > li{
+                > a{
+                    font-size: 60px;
+
+                    &::after{
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

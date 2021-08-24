@@ -1,0 +1,35 @@
+.etc-ie{
+    width: 100vw;
+    height: calc(100vh - 230px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #ie-wrap{
+        height: 260px;
+        width: 730px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            margin-bottom: 40px;
+        }
+        h2{
+            font-size: 30px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            color: $black-100;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 400;
+            color: #777777;
+            line-height: 22px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+
+.swiper-container{
+    height: 100vh;
+    display: flex;
+    background-color: #E8ECEB;
+
+    .swiper-slide{
+        width: auto !important;
+    }
+}
+.certificate-title{
+    margin-left: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto !important;
+    
+    h2{
+        font-size: 90px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 600;
+        color: #03372B;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        line-height: 92px;
+    }
+    p{
+        font-size: 20px;
+        font-family: "Spoqa Han Sans",sans-serif;
+        font-weight: 400;
+        color: #777777;
+        line-height: 29px;
+    }
+}
+.certificate-tag{
+    margin-left: 208px;
+    width: min-content !important;
+
+    ul{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        li{
+            margin-right: 95px;
+            transition: 0.25s ease;
+            height: 100%;
+            width: 260px;
+            position: relative;
+
+            img{
+                position: absolute;
+                top: 45%;
+                transform: translateY(-50%);
+
+                &+img{
+                    opacity: 0;
+                    transition: 0.5s ease;
+                }
+            }
+
+            &:hover{
+                transform: translateY(-40px);
+
+                img+img{
+                    opacity: 1;
+                }
+            }
+            
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.certificate-frame{
+    width: min-content !important;
+    margin: 0 15%;
+    margin-left: 170px;
+    margin-right: 190px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    p{
+        font-size: 25px;
+        font-family: "Spoqa Han Sans",sans-serif;
+        font-weight: 400;
+        color: #03372B;
+        text-align: center;
+        width: max-content;
+        line-height: 34px;
+        
+        strong{
+            border-top: none;
+            font-size: 25px;
+            font-family: "Spoqa Han Sans",sans-serif;
+            font-weight: 600;
+            color: #03372B;
+        }
+    }
+    strong{
+        font-size: 16px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 600;
+        color: $black-100;
+        margin-top: 37px;
+        padding-top: 6px;
+        border-top: 2px solid $black-100;
+        text-transform: uppercase;
+    }
+    .certificate-frame-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+}
+.certificate{
+    .pagenavigation1{
+        position: absolute;
+        left: 40px;
+    }
+}
+.certificate-shadow{
+    width: 99%;
+    bottom: 20%;
+    position: absolute;
+    left: 50.5%;
+    transform: translateX(-50%);
+
+}
+@media all and(max-width:2560px){
+    .certificate-shadow{
+        bottom: 15%;
+    }    
+}
+
+@media all and(max-width:1920px){
+    .certificate-shadow{
+        bottom: 10%;
+    }
+}
+
+@media all and(max-width:1440px){
+    .certificate-shadow{
+        bottom: 12.5%;
+    }
+    .certificate-frame-img{
+        img{
+            margin-left: 60px;
+        }
+    }
+}
+@media all and(max-width:1280px){
+    .certificate-tag{
+        margin-left: 102px;
+        bottom: 10%;
+
+        ul li{
+            margin-right: 60px;
+        }
+    }
+    .certificate-shadow{
+        position: absolute;
+        bottom: 130px;
+        bottom: 15%;
+        
+        img{
+            width: 100%;
+        }
+    }
+    .certificate-frame{
+        margin-left: 130px;
+
+        p{
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .certificate-frame-img{
+            margin-top: 15%;
+        }
+        img{
+            width: 289px;
+            margin-left: 60px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        strong{
+            font-size: 12px;
+        }
+    }
+}
